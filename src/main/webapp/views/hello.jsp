@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: khris
@@ -8,9 +9,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <link rel="stylesheet" href="<c:url value='/static/css/style.css' />" />
     <title>Inicio</title>
 </head>
 <body>
-Hello World
+<h1>Hello World</h1>
 </body>
 </html>
