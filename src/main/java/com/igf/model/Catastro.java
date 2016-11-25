@@ -6,7 +6,7 @@ import java.util.Date;
  * Created by khris on 11-22-16.
  */
 
-public class Customer {
+public class Catastro {
 
     private Long id;
     private String firstName;
@@ -15,7 +15,7 @@ public class Customer {
     private String mobile;
     private Date dateOfBirth;
 
-    public Customer(long id, String firstName, String lastName, String email, String mobile){
+    public Catastro(long id, String firstName, String lastName, String email, String mobile){
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -24,7 +24,7 @@ public class Customer {
         this.dateOfBirth = new Date();
     }
 
-    public Customer(){
+    public Catastro(){
 
     }
 
