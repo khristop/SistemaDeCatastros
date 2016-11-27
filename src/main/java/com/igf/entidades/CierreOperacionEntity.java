@@ -1,4 +1,4 @@
-package com.igf.hibernate;
+package com.igf.entidades;
 
 import javax.persistence.*;
 import java.sql.Date;

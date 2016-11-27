@@ -20,12 +20,12 @@ public class CatastroRestController {
     private CatastroDAO catastroDAO;
 
 
-    @GetMapping("/catastro")
+    @GetMapping("/api/catastro")
     public List<Catastro> getCatastros() {
         return catastroDAO.list();
     }
 
-    @GetMapping("/catastro/{id}")
+    @GetMapping("/api/catastro/{id}")
     public ResponseEntity getCustomer(@PathVariable("id") Long id) {
 
         Catastro catastro = catastroDAO.get(id);
@@ -36,7 +36,7 @@ public class CatastroRestController {
         return new ResponseEntity(catastro, HttpStatus.OK);
     }
 
-    @PostMapping(value = "/catastro")
+    @PostMapping(value = "/api/catastro")
     public ResponseEntity createCatastro(@RequestBody Catastro catastro) {
 
         catastroDAO.create(catastro);
@@ -44,7 +44,7 @@ public class CatastroRestController {
         return new ResponseEntity(catastro, HttpStatus.OK);
     }
 
-    @DeleteMapping("/catastro/{id}")
+    @DeleteMapping("/api/catastro/{id}")
     public ResponseEntity deletCatastro(@PathVariable Long id) {
 
         if (null == catastroDAO.delete(id)) {
@@ -55,7 +55,7 @@ public class CatastroRestController {
 
     }
 
-    @PutMapping("/catastro/{id}")
+    @PutMapping("/api/catastro/{id}")
     public ResponseEntity updateCatastro(@PathVariable Long id, @RequestBody Catastro catastro) {
 
         catastro = catastroDAO.update(id, catastro);
