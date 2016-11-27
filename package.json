@@ -1,0 +1,25 @@
+{
+  "name": "catastro",
+  "version": "1.0.0",
+  "description": "sistema de catastros",
+  "main": " ",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khristop/SistemaDeCatastros.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/khristop/SistemaDeCatastros/issues"
+  },
+  "homepage": "https://github.com/khristop/SistemaDeCatastros#readme",
+  "dependencies": {
+    "grunt": "^1.0.1"
+  },
+  "devDependencies": {
+    "bower": "^1.8.0"
+  }
+}
