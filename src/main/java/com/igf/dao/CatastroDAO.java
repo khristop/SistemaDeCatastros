@@ -1,6 +1,8 @@
 package com.igf.dao;
 
 import com.igf.model.Catastro;
+import com.igf.util.Main;
+import org.hibernate.Session;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -44,6 +46,7 @@ public class CatastroDAO {
 
     public Catastro get(Long id) {
 
+        Session session = Main.getSession();
         for (Catastro c : catastros) {
             if (c.getId().equals(id)) {
                 return c;

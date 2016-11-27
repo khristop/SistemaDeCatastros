@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="MySQL - catastro@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1" name="catastro">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="information_schema"/>
+    <schema id="4" parent="1" name="mysql"/>
+    <schema id="5" parent="1" name="performance_schema"/>
+    <schema id="6" parent="1" name="phpmyadmin"/>
+    <schema id="7" parent="1" name="test"/>
+    <table id="8" parent="2" name="actividad_economica"/>
+    <table id="9" parent="2" name="alcaldia"/>
+    <table id="10" parent="2" name="calificacion_servicio"/>
+    <table id="11" parent="2" name="cierre_operacion"/>
+    <table id="12" parent="2" name="cuenta_corriente"/>
+    <table id="13" parent="2" name="departamento"/>
+    <table id="14" parent="2" name="detalle_empresa"/>
+    <table id="15" parent="2" name="detalle_inmueble"/>
+    <column id="16" parent="8" name="ID_ACTIVIDAD">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="17" parent="8" name="ID_EMPRESA">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="18" parent="8" name="NOMBRE_ACTIVIDAD">
+      <Position>3</Position>
+      <DataType>char(30)|0</DataType>
+    </column>
+    <column id="19" parent="8" name="DESCRIPCION">
+      <Position>4</Position>
+      <DataType>char(100)|0</DataType>
+    </column>
+    <key id="20" parent="8" name="PRIMARY">
+      <ColNames>ID_ACTIVIDAD</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="21" parent="9" name="ID_ALCANDIA">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="22" parent="9" name="ID_INMUEBLE">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="23" parent="9" name="ID_MUN">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="24" parent="9" name="NOMBRE_ALCALDIA">
+      <Position>4</Position>
+      <DataType>char(30)|0</DataType>
+    </column>
+    <key id="25" parent="9" name="PRIMARY">
+      <ColNames>ID_ALCANDIA</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="26" parent="10" name="ID_CALIFICACION">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="27" parent="10" name="MONTO_SERVICIO">
+      <Position>2</Position>
+      <DataType>float|0</DataType>
+    </column>
+    <key id="28" parent="10" name="PRIMARY">
+      <ColNames>ID_CALIFICACION</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="29" parent="11" name="ID_CIERRE">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="30" parent="11" name="ID_DETALLEEMP">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="31" parent="11" name="FECHA_CIERRE">
+      <Position>3</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="32" parent="11" name="MOTIVO">
+      <Position>4</Position>
+      <DataType>char(200)|0</DataType>
+    </column>
+    <key id="33" parent="11" name="PRIMARY">
+      <ColNames>ID_CIERRE</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="34" parent="12" name="ID_CUENTA">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="35" parent="12" name="ID_INMUEBLE">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="36" parent="12" name="ID_TASA">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="37" parent="12" name="NOMBRE_CUENTAC">
+      <Position>4</Position>
+      <DataType>char(50)|0</DataType>
+    </column>
+    <column id="38" parent="12" name="DESCRIPCIONC">
+      <Position>5</Position>
+      <DataType>char(100)|0</DataType>
+    </column>
+    <key id="39" parent="12" name="PRIMARY">
+      <ColNames>ID_CUENTA</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="40" parent="13" name="ID_DEP">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="41" parent="13" name="NOMBRE_DEP">
+      <Position>2</Position>
+      <DataType>char(30)|0</DataType>
+    </column>
+    <key id="42" parent="13" name="PRIMARY">
+      <ColNames>ID_DEP</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="43" parent="14" name="ID_DETALLEEMP">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="44" parent="14" name="MONTO_INICIOEMP">
+      <Position>2</Position>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="45" parent="14" name="FECHA_INGRESO">
+      <Position>3</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="46" parent="14" name="FECHA_COBRO">
+      <Position>4</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="47" parent="14" name="ESTADO">
+      <Position>5</Position>
+      <DataType>char(50)|0</DataType>
+    </column>
+    <column id="48" parent="14" name="SOLVENCIA">
+      <Position>6</Position>
+      <DataType>char(100)|0</DataType>
+    </column>
+    <column id="49" parent="14" name="OBSERVACION">
+      <Position>7</Position>
+      <DataType>char(100)|0</DataType>
+    </column>
+    <column id="50" parent="14" name="PERIDOD_PAGO">
+      <Position>8</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <key id="51" parent="14" name="PRIMARY">
+      <ColNames>ID_DETALLEEMP</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="52" parent="15" name="ID_DETALLE">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="53" parent="15" name="FECHA_RESGISTRO">
+      <Position>2</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="54" parent="15" name="ESTADO">
+      <Position>3</Position>
+      <DataType>char(50)|0</DataType>
+    </column>
+    <column id="55" parent="15" name="SOLVENCIA">
+      <Position>4</Position>
+      <DataType>char(100)|0</DataType>
+    </column>
+    <column id="56" parent="15" name="FECHA_COBRO">
+      <Position>5</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="57" parent="15" name="OBSERVACION">
+      <Position>6</Position>
+      <DataType>char(100)|0</DataType>
+    </column>
+    <column id="58" parent="15" name="PERIODO_PAGO">
+      <Position>7</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <key id="59" parent="15" name="PRIMARY">
+      <ColNames>ID_DETALLE</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>

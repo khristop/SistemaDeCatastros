@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.url">jdbc:mysql://localhost:3306/catastro</property>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password"></property>
+        <mapping class="com.igf.hibernate.ActividadEconomicaEntity"/>
+        <mapping class="com.igf.hibernate.AlcaldiaEntity"/>
+        <mapping class="com.igf.hibernate.CalificacionServicioEntity"/>
+        <mapping class="com.igf.hibernate.CierreOperacionEntity"/>
+        <mapping class="com.igf.hibernate.CuentaCorrienteEntity"/>
+        <mapping class="com.igf.hibernate.DepartamentoEntity"/>
+        <mapping class="com.igf.hibernate.DetalleEmpresaEntity"/>
+        <mapping class="com.igf.hibernate.DetalleInmuebleEntity"/>
+        <!-- <property name="connection.username"/> -->
+        <!-- <property name="connection.password"/> -->
+
+        <!-- DB schema will be updated if needed -->
+        <!-- <property name="hbm2ddl.auto">update</property> -->
+    </session-factory>
+</hibernate-configuration>
