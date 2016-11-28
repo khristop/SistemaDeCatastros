@@ -17,7 +17,7 @@
 
     <title>Sistema de Catastros</title>
 </head>
-<body ng-controller="inicioController">
+<body>
 
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container-fluid">
@@ -53,7 +53,7 @@
             <li class="active"><a href="#/"><span class="fa fa-home"></span> Home</a></li>
             <li><a href="#catastro"><span class="fa fa-book"></span> Gestion de cuentas</a></li>
             <li><a href="#otro"> <span class="fa fa-shield"></span> Gestion de inmuebles</a></li>
-            <li><a href="#otro"> <span class="fa fa-apple"></span> Gestion de departamentos</a></li>
+            <li><a href="#departamento"> <span class="fa fa-apple"></span> Gestion de departamentos </a></li>
             <li><a href="#otro"> <span class="fa fa-arrow-up"></span> Gestion de Empresas</a></li>
             <li><a href="#otro"> <span class="fa fa-bank"></span> Gestion de alcaldia</a></li>
             <li role="presentation" class="divider"></li>
@@ -62,10 +62,20 @@
 
     </div><!--/.sidebar-->
 
+    <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+        <div class="row">
+            <ol class="breadcrumb">
+                <li><a href="#/"><span class="fa fa-home"></span></a></li>
+                <li class="active">algun lugar</li>
+            </ol>
+        </div><!--/.row-->
+
+
     <div id="main" >
 
         <div ng-view></div>
 
+    </div>
     </div>
 
     <!-- Scripts -->

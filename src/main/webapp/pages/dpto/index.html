@@ -1,0 +1,70 @@
+
+<div class="row">
+    <div class="col-md-12">
+        <h1 class="page-header"> Departamentos</h1>
+    </div>
+</div>
+
+<div >
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-5">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        Registro de departamentos
+                    </div>
+                    <div class="panel-body">
+                        <form name="dptform" class="form-horizontal" novalidate>
+                            <div class="form-group" ng-class="{'has-error' : dptform.nombre.$invalid && !dptform.nombre.$pristine }">
+                                <label class="col-sm-4 control-label" for="nombre"> Nombre del departamento:</label>
+                                <div class="col-sm-6">
+                                    <input type="text" name="nombre" ng-model="depnombre" class="form-control" id="nombre" placeholder="Ingrese en nombre" required>
+                                    <p class="help-block" ng-show="dptform.nombre.$invalid && !dptform.nombre.$pristine"> El campo es requerido</p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="panel-footer">
+                        <div class="row">
+                            <div class="col-lg-8"></div>
+                            <div class="col-lg-4">
+                                <button class="btn btn-md btn-success" type="submit" ng-click="guardarDepartamento()" ng-disabled="dptform.$invalid"> Registrar </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="panel panel-info">
+                    <div class="panel-heading">Departamentos</div>
+                    <div class="panel-body">
+                        <h4>Tabla de valores</h4>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <table class="table table-bordered table-striped table-responsive">
+                                    <thead>
+                                        <tr>
+                                            <th> ID</th>
+                                            <th> Nombre</th>
+                                            <th> Accion</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr ng-repeat="dp in departamentos">
+                                            <td> {{dp.id}} </td>
+                                            <td> {{dp.nombre}} </td>
+                                            <td>
+                                                <a ng-click="eliminar(dp.id)" class="btn btn-sm btn-danget"><span class="fa fa-remove"></span></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
