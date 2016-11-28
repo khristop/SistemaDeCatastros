@@ -1,6 +1,6 @@
 
-.idea/
-target/
-node_modules/
-lib/
+/.idea
+/target
+/node_modules
+/lib
 *.iml
