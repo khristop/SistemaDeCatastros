@@ -1,18 +1,25 @@
 package com.igf.entidades;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 /**
  * Created by Christopher on 27/11/2016.
  */
 @Entity
-@Table(name = "departamento", schema = "catastro", catalog = "")
-public class DepartamentoEntity {
-    private int idDep;
-    private String nombreDep;
+@Table(name = "departamento", schema = "catastro")
+public class DepartamentoEntity implements Serializable{
+
+    private static final long serialVersionUID = 1L;
 
     @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
     @Column(name = "ID_DEP")
+    private int idDep;
+
+    @Column(name = "NOMBRE_DEP")
+    private String nombreDep;
+
     public int getIdDep() {
         return idDep;
     }
@@ -21,33 +28,12 @@ public class DepartamentoEntity {
         this.idDep = idDep;
     }
 
-    @Basic
-    @Column(name = "NOMBRE_DEP")
+
     public String getNombreDep() {
         return nombreDep;
     }
 
     public void setNombreDep(String nombreDep) {
         this.nombreDep = nombreDep;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        DepartamentoEntity that = (DepartamentoEntity) o;
-
-        if (idDep != that.idDep) return false;
-        if (nombreDep != null ? !nombreDep.equals(that.nombreDep) : that.nombreDep != null) return false;
-
-        return true;
-    }
-
-    @Override
-    public int hashCode() {
-        int result = idDep;
-        result = 31 * result + (nombreDep != null ? nombreDep.hashCode() : 0);
-        return result;
     }
 }
