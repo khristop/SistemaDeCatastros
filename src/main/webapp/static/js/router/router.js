@@ -22,7 +22,7 @@ app.config(function ($routeProvider) {
 
         .when("/departamento", {
             templateUrl : 'pages/dpto/index.html',
-            controller: 'departamento'
+            controller: 'departamentoController'
         })
 
         .when("/404",{templateUrl: 'pages/404.html'})

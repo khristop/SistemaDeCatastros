@@ -14,38 +14,52 @@ app.controller('otroController', function ($scope) {
     $scope.message ='Otra pagina!!!';
 });
 
-app.controller('departamento', function ($scope, $http) {
+app.controller('departamentoController', function ($scope, $http, Departamento) {
 
-    $scope.departamentos = {};
+    $scope.departamentos = [];
+    $scope.departamento = new Departamento();
+
+    $scope.fetchDepartamentos = function () {
+        $scope.departamentos = Departamento.query();
+    };
+
+    $scope.fetchDepartamentos();
 
     $scope.guardarDepartamento = function () {
-        $http({
-            method: 'POST',
-            url: '/api/departamento/crear',
-            params:{
-                nombre: $scope.depnombre
-            }
-        }).success(function (data) {
-            if(data.status =="ok"){
-                alert("ok");
-                limpiar();
-            }else{
-                alert("Si trajo pero no ok");
-            }
-        }).error(function () {
-            alert("No se conecto al server");
-        })
+        // $http({
+        //     method: 'POST',
+        //     url: '/api/departamento/crear',
+        //     params:{
+        //         nombre: $scope.depnombre
+        //     }
+        // }).success(function (data) {
+        //     if(data.status =="ok"){
+        //         alert("ok");
+        //         limpiar();
+        //     }else{
+        //         alert("Si trajo pero no ok");
+        //     }
+        // }).error(function () {
+        //     alert("No se conecto al server");
+        // })
+        if($scope.dptform.$valid){
+            console.log($scope.departamento);
+            $scope.departamento.$save(function (departamento) {
+                console.log(departamento);
+                $scope.flag = 'creado';
+                $scope.fetchDepartamentos();
+                console.log("exito");
+            }),
+                function (err) {
+                    $scope.flag="fracaso";
+                    console.log("fracaso");
+                }
+        }
     };
 
     $scope.obtenerDepartamentos = function () {
-        $http({
-            method: 'GET',
-            url: '/api/departamento'
-        }).success(function (data) {
-            $scope.departamentos = data;
-        }).error(function () {
-            console.log("no se pudieron obtener");
-        })
+        $scope.departamentos = Departamento.query();
+        console.log(departamentos);
     };
 
     $scope.eliminarDepartamento = function (id) {

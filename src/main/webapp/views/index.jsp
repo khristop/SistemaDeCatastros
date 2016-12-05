@@ -85,6 +85,7 @@
     <script src="<c:url value='/static/bower_components/bootstrap/dist/js/bootstrap.js' />" ></script>
     <script src="<c:url value='/static/bower_components/angular/angular.js' />"></script>
     <script src="<c:url value='/static/bower_components/angular-route/angular-route.js' />" ></script>
+    <script src="<c:url value='/static/bower_components/angular-resource/angular-resource.js' />" ></script>
     <!-- app de angular -->
     <!-- definicion de angular -->
     <script src="<c:url value='/static/js/main.js' />" ></script>

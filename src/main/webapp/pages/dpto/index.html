@@ -15,10 +15,11 @@
                     </div>
                     <div class="panel-body">
                         <form name="dptform" class="form-horizontal" novalidate>
+
                             <div class="form-group" ng-class="{'has-error' : dptform.nombre.$invalid && !dptform.nombre.$pristine }">
                                 <label class="col-sm-4 control-label" for="nombre"> Nombre del departamento:</label>
                                 <div class="col-sm-6">
-                                    <input type="text" name="nombre" ng-model="depnombre" class="form-control" id="nombre" placeholder="Ingrese en nombre" required>
+                                    <input type="text" name="nombre" ng-model="departamento.nombreDep" class="form-control" id="nombre" placeholder="Ingrese en nombre" required>
                                     <p class="help-block" ng-show="dptform.nombre.$invalid && !dptform.nombre.$pristine"> El campo es requerido</p>
                                 </div>
                             </div>
@@ -52,8 +53,8 @@
                                     </thead>
                                     <tbody>
                                         <tr ng-repeat="dp in departamentos">
-                                            <td> {{dp.id}} </td>
-                                            <td> {{dp.nombre}} </td>
+                                            <td> {{dp.idDep}} </td>
+                                            <td> {{dp.nombreDep}} </td>
                                             <td>
                                                 <a ng-click="eliminar(dp.id)" class="btn btn-sm btn-danget"><span class="fa fa-remove"></span></a>
                                             </td>

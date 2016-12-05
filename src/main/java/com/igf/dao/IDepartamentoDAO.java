@@ -51,7 +51,7 @@ public class IDepartamentoDAO implements DepartamentoDAO{
     @SuppressWarnings("unchecked")
     @Override
     public boolean departamentoExists(String name) {
-        String dq1 = "FROM departamento as dep WHERE dep.id = ?";
+        String dq1 = "FROM DepartamentoEntity as dep WHERE dep.nombreDep = ?";
         List<DepartamentoEntity> departamentos = (List<DepartamentoEntity>) hibernateTemplate.find(dq1, name);
         return departamentos.size() > 0 ? true : false;
     }
