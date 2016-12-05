@@ -1,6 +1,3 @@
-/**
- * Created by Christopher on 27/11/2016.
- */
 
 app.controller('inicioController', function ($scope) {
     $scope.message ='Inicio!!!';
