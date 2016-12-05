@@ -99,7 +99,7 @@
         <profile>
             <id>openshift</id>
             <build>
-                <finalName>catastro</finalName>
+                <finalName>sigescat</finalName>
                 <plugins>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
