@@ -14,12 +14,13 @@ import org.springframework.web.servlet.view.JstlView;
  * Created by khris on 11-22-16.
  */
 @Configuration
-@ComponentScan(basePackages = "com.igf")
 @EnableWebMvc
+@ComponentScan(basePackages = "com.igf")
+
 public class AppConfig extends WebMvcConfigurerAdapter {
 
     @Bean
-    public InternalResourceViewResolver viewResolver(){
+    public InternalResourceViewResolver resolver(){
         InternalResourceViewResolver resolver = new InternalResourceViewResolver();
         resolver.setPrefix("/views/");
         resolver.setSuffix(".jsp");
